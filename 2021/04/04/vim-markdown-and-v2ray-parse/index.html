@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/pictures/icon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/pictures/icon.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/pictures/icon.svg">
+  <link rel="mask-icon" href="/pictures/icon.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"cyliu.cc","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.10.1","exturl":false,"sidebar":{"position":"right","display":"remove","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Recherche...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="摸鱼的一天，没怎么看论文，在折腾一些软件。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vim Markdown 方案与v2ray订阅解析">
+<meta property="og:url" content="https://cyliu.cc/2021/04/04/vim-markdown-and-v2ray-parse/index.html">
+<meta property="og:site_name" content="CYLiu">
+<meta property="og:description" content="摸鱼的一天，没怎么看论文，在折腾一些软件。">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:image" content="https://cyliu.cc/2021/04/04/vim-markdown-and-v2ray-parse/vim_markdown_preview.png">
+<meta property="article:published_time" content="2021-04-04T13:55:06.000Z">
+<meta property="article:modified_time" content="2022-03-14T15:27:56.153Z">
+<meta property="article:author" content="CYLiu">
+<meta property="article:tag" content="code">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cyliu.cc/2021/04/04/vim-markdown-and-v2ray-parse/vim_markdown_preview.png">
+
+
+<link rel="canonical" href="https://cyliu.cc/2021/04/04/vim-markdown-and-v2ray-parse/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"fr","comments":true,"permalink":"https://cyliu.cc/2021/04/04/vim-markdown-and-v2ray-parse/","path":"2021/04/04/vim-markdown-and-v2ray-parse/","title":"Vim Markdown 方案与v2ray订阅解析"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Vim Markdown 方案与v2ray订阅解析 | CYLiu</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Basculer la barre de navigation" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">CYLiu</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">CYLiu</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Accueil</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>À propos</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Mots clés</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Catégories</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="fr">
+    <link itemprop="mainEntityOfPage" href="https://cyliu.cc/2021/04/04/vim-markdown-and-v2ray-parse/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="CYLiu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CYLiu">
+      <meta itemprop="description" content="">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Vim Markdown 方案与v2ray订阅解析 | CYLiu">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Vim Markdown 方案与v2ray订阅解析
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posté le</span>
+
+      <time title="Article créé le: 2021-04-04 21:55:06" itemprop="dateCreated datePublished" datetime="2021-04-04T21:55:06+08:00">2021-04-04</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>摸鱼的一天，没怎么看论文，在折腾一些软件。 <span id="more"></span></p>
+<h2 id="vim-markdown-preview插件">vim markdown-preview插件</h2>
+<p>将原来的jupyter lab换成了vim的<a target="_blank" rel="noopener" href="https://github.com/iamcco/markdown-preview.nvim">markdown-preview</a>插件，虽然jupyter lab很好用，配上vim键位，也可以实现很多vim快捷键，但是每次更新还要重新build，感觉不是很友好，另外，文件太长了渲染很慢，很卡。markdown-preview插件响应迅速多了，此外界面很简洁，数学公式默认katex渲染，速度更快，最重要的，预览会跟随vim光标移动。 <img src="/2021/04/04/vim-markdown-and-v2ray-parse/vim_markdown_preview.png" class="" title="vim_markdown_preview"> 内存占用方面，vim几乎不占内存，markdown-preview后台是node，占用内存大概700M。由于装完markdown-preview插件后就把jupyter全删了，没来得及比较jupyter内存占用。Anyway，反正电脑内存够用，内存占用多一点也无所谓。</p>
+<p>然而markdown-preview插件无法在安卓的termux中使用，github上有人提类似issue，应该是node的问题，不过termux连上蓝牙键盘后会自动进入latin mode，无法输入中文，就算能安装了打不了中文也很难受，所以安卓还是jupyter lab方案。最近华为系统更新，杀后台更加严重，jupyter有时候写的内容没保持上，也是一个痛点，想找个好用编辑器太难了。</p>
+<h2 id="v2ray-订阅链接解析">v2ray 订阅链接解析</h2>
+<p>因为服务器上没有gui，想要代理只能v2ray core，但是目前只有订阅链接，如何转为配置文件是个问题，经过google找到了liolok老师的一篇文章<a target="_blank" rel="noopener" href="https://liolok.github.io/V2Ray-Subscription-Parse/zh-Hans/">V2Ray 订阅解析</a>，仔细研究了下，发现其实就做了三件事。第一步，从订阅链接获取base64加密的vmess链接；第二步，提取vmess://后面部分；第三部，再base64解密一下，如果用shell其实就一行的事:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -L 订阅链接 | <span class="built_in">base64</span> -d | <span class="built_in">cut</span> -d <span class="string">&quot;/&quot;</span> -f 3 | <span class="built_in">base64</span> -d</span><br></pre></td></tr></table></figure>
+<!------
+有时候就搞不懂为什么有人就喜欢执着于python，之前在某个群里讨论视频里提取音频文件，明明ffmpeg命令行一行命令就完成的事，有人就喜欢python导入ffmpeg的库，调用就得一行代码了，然后还要设置参数什么的，和命令行设置参数比复杂多了。后来干脆直接不说话了，有时候在一些低质量的群里聊天也挺痛苦，还是telegram这种纯粹的技术群信息密度更好，而且有大神坐镇。
+------->
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/code/" rel="tag"># code</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/03/19/wind/" rel="prev" title="十二月的诗">
+                  <i class="fa fa-chevron-left"></i> 十二月的诗
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/04/19/%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85Arch%E5%B9%B6%E9%85%8D%E7%BD%AE/" rel="next" title="阿里云服务器安装Arch并配置">
+                  阿里云服务器安装Arch并配置 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CYLiu</span>
+</div>
+  <div class="powered-by">Propulsé par <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>

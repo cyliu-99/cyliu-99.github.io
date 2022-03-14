@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/pictures/icon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/pictures/icon.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/pictures/icon.svg">
+  <link rel="mask-icon" href="/pictures/icon.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"cyliu.cc","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.10.1","exturl":false,"sidebar":{"position":"right","display":"remove","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Recherche...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Group Theory for Physicists 2.2 Group and its Multiplication Table Symmetric Transformation: A transformation is called the symmetric transformation of a system if it preserves the system invariant. D">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Group Theory for Physicists">
+<meta property="og:url" content="https://cyliu.cc/2021/06/27/Group-Theory-for-Physicists/index.html">
+<meta property="og:site_name" content="CYLiu">
+<meta property="og:description" content="Group Theory for Physicists 2.2 Group and its Multiplication Table Symmetric Transformation: A transformation is called the symmetric transformation of a system if it preserves the system invariant. D">
+<meta property="og:locale" content="fr_FR">
+<meta property="article:published_time" content="2021-06-27T12:48:15.000Z">
+<meta property="article:modified_time" content="2022-03-14T15:27:56.157Z">
+<meta property="article:author" content="CYLiu">
+<meta property="article:tag" content="Math">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://cyliu.cc/2021/06/27/Group-Theory-for-Physicists/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"fr","comments":true,"permalink":"https://cyliu.cc/2021/06/27/Group-Theory-for-Physicists/","path":"2021/06/27/Group-Theory-for-Physicists/","title":"Group Theory for Physicists"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Group Theory for Physicists | CYLiu</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Basculer la barre de navigation" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">CYLiu</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">CYLiu</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Accueil</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>À propos</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Mots clés</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Catégories</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="fr">
+    <link itemprop="mainEntityOfPage" href="https://cyliu.cc/2021/06/27/Group-Theory-for-Physicists/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="CYLiu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CYLiu">
+      <meta itemprop="description" content="">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Group Theory for Physicists | CYLiu">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Group Theory for Physicists
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posté le</span>
+
+      <time title="Article créé le: 2021-06-27 20:48:15" itemprop="dateCreated datePublished" datetime="2021-06-27T20:48:15+08:00">2021-06-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">dans</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Math/" itemprop="url" rel="index"><span itemprop="name">Math</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="group-theory-for-physicists">Group Theory for Physicists</h1>
+<h2 id="group-and-its-multiplication-table">2.2 Group and its Multiplication Table</h2>
+<p><strong>Symmetric Transformation</strong>: A transformation is called the symmetric transformation of a system if it preserves the system invariant.</p>
+<p><strong>Definition of a Group</strong>:<br />
+A group <span class="math inline">\(G\)</span> is a set of symmetric transformation with a defined multiplication of elements, and satisfies the following rules: <span id="more"></span> 1. The set is closed to multiplication<br />
+<span class="math display">\[
+RS\in G, \forall R,S\in G
+\]</span> 2. Associative<br />
+<span class="math display">\[
+R(ST)=(RS)T
+\]</span> 3. Identical elements <span class="math display">\[
+\exists E\in G, ER=E, \forall R\in G
+\]</span> 4. Inverse elements <span class="math display">\[
+R^{-1} \in G, RR^{-1}=E,\forall R\in G
+\]</span></p>
+<p>Commutative is not necessary. If the group is also commutative, it's called <strong>Abelian</strong>.</p>
+<p><strong>The order of a finite group</strong>: The number of elements.</p>
+<p><strong>Continuos group</strong>: If the elements in an <strong>infinite group</strong> can be described by a set of continuos parameters, it's called a continuos group.</p>
+<p><strong>Isomorphic</strong>: If there's a one-to-one correspondence between elements of two groups, and the correspondence is invariant to multiplication, the two groups are called isomorphic. <span class="math display">\[
+\forall R\in G, S\in G, R&#39; \in G&#39;, S&#39;\in G&#39;
+\]</span> <span class="math display">\[
+\exists R&#39;\leftrightarrow R, S&#39;\leftrightarrow S, R&#39;S&#39;\leftrightarrow RS
+\]</span></p>
+<p><strong>A complex of elements</strong>: A subset in the group <span class="math inline">\(G\)</span> is called a complex of elements.</p>
+<p><strong>Equality of two complexes</strong>: <span class="math inline">\(R\subset S\)</span> and <span class="math inline">\(S\subset R\)</span>, then <span class="math inline">\(R=S\)</span></p>
+<p><strong>Product of two complexes</strong>:<br />
+<span class="math inline">\(R=\{R_1,R_2,\dots,R_m\}\)</span>, <span class="math inline">\(S=\{S_1,S_2,\dots,S_n\}\)</span>, <span class="math inline">\(RS=\{R_jS_k\}\)</span>, <span class="math inline">\(j=1,\dots,m;k=1,\dots,n\)</span>, the product of two complexes is still a complex</p>
+<p><strong>Rearrangement theorem</strong>: For any elements <span class="math inline">\(T\)</span> in a group, <span class="math inline">\(G=\{E,R,S,\dots\}\)</span>, the following three sets are all the same as the original group <span class="math inline">\(G\)</span>: <span class="math display">\[
+\begin{aligned}
+TG&amp;=\{T,TR,TS,\dots\}\\
+GT&amp;=\{T,RT,ST,\dots\}\\
+G^{-1}&amp;=\{E,R^{-1},S^{-1},\dots\}
+\end{aligned}
+\]</span> <span class="math inline">\(G=TG=GT=T^{-1}\)</span></p>
+<p><strong>Proof</strong><br />
+From the definition of group, <span class="math inline">\(T\in G, TR\in G, TS\in G,\dots\)</span>, so <span class="math inline">\(TG\subset G\)</span>;<br />
+Any <span class="math inline">\(R\)</span> in <span class="math inline">\(G\)</span> can be expressed by <span class="math inline">\(R=T(T^{-1}R)\)</span>, <span class="math inline">\(T^{-1}R\in G\)</span>, <span class="math inline">\(R\in TG\)</span>, so <span class="math inline">\(G\subset TG\)</span></p>
+<p><strong>Multiplication table of a group</strong>: top<span class="math inline">\(\leftrightarrow\)</span>right; left<span class="math inline">\(\leftrightarrow\)</span>left;</p>
+<p>From rearrangement theorem, there's no repetitive elements in each row and in each column of the group table.</p>
+<p><strong>Cyclic group</strong>: A finite group constructed by the powers of one element <span class="math inline">\(R\)</span> is called the cyclic group, denoted by <span class="math inline">\(C_N\)</span>. <span class="math display">\[
+C_N=\{E,R,R^2,\dots,R^{N-1}\}, R^N=E
+\]</span> <span class="math inline">\(N\)</span> is called the order of <span class="math inline">\(C_N\)</span>, and <span class="math inline">\(C_N\)</span> is Abelian.</p>
+<p><strong>Proper rotation</strong>: pure rotation; <strong>Improper rotation</strong>: pure rotation followed by a space inversion.</p>
+<p><strong>The order of the elements</strong>: In <strong>Finite Group</strong>, lowerst <span class="math inline">\(n\)</span> for <span class="math inline">\(R^n=E\)</span> is called the order of the element <span class="math inline">\(R\)</span>.</p>
+<p><strong>The period of <span class="math inline">\(R\)</span></strong>: The subset of powers of <span class="math inline">\(R\)</span> in <span class="math inline">\(G\)</span> is called the period of <span class="math inline">\(R\)</span>.</p>
+<p><strong>Generators</strong>: The elements are called the generators of a finite group <span class="math inline">\(G\)</span> if each element in <span class="math inline">\(G\)</span> can be expressed as a multiplication of the generators, and each generator is not equal to the multiplication of other generators.</p>
+<p><strong>Rank of a group</strong>: The least number of generators.</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Math/" rel="tag"># Math</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/05/31/a-visual-introduction-to-differential-forms-and-calculus-on-manifolds/" rel="prev" title="A visual introduction to differential forms and calculus on manifolds">
+                  <i class="fa fa-chevron-left"></i> A visual introduction to differential forms and calculus on manifolds
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/09/28/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E4%B8%8Evnc/" rel="next" title="内网穿透与vnc">
+                  内网穿透与vnc <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CYLiu</span>
+</div>
+  <div class="powered-by">Propulsé par <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>
