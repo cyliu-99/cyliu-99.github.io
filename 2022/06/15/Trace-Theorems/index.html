@@ -20,27 +20,29 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"cyliu.cc","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"right","display":"remove","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Recherche...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Week 4, Friday \[ \mathrm{d}U&#x3D;\mathrm{d}Q-p\mathrm{d}V \]">
+    <meta name="description" content="\[ \operatorname{Tr}(A+B) \equiv \operatorname{Tr}(A)+\operatorname{Tr}(B) \] \[ \operatorname{Tr}(A B \ldots Y Z) \equiv \operatorname{Tr}(Z A B \ldots Y) \] \[ \gamma^{\mu} \gamma^{\nu}+\gamma^{\nu}">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Statistical Mechanics Lecture Notes">
-<meta property="og:url" content="https://cyliu.cc/2022/03/11/Statistical-Mechanics-Lecture-Notes/index.html">
+<meta property="og:title" content="Trace Theorems">
+<meta property="og:url" content="https://cyliu.cc/2022/06/15/Trace-Theorems/index.html">
 <meta property="og:site_name" content="CYLiu">
-<meta property="og:description" content="Week 4, Friday \[ \mathrm{d}U&#x3D;\mathrm{d}Q-p\mathrm{d}V \]">
+<meta property="og:description" content="\[ \operatorname{Tr}(A+B) \equiv \operatorname{Tr}(A)+\operatorname{Tr}(B) \] \[ \operatorname{Tr}(A B \ldots Y Z) \equiv \operatorname{Tr}(Z A B \ldots Y) \] \[ \gamma^{\mu} \gamma^{\nu}+\gamma^{\nu}">
 <meta property="og:locale" content="fr_FR">
-<meta property="article:published_time" content="2022-03-11T08:42:26.000Z">
-<meta property="article:modified_time" content="2022-03-14T15:27:56.153Z">
+<meta property="article:published_time" content="2022-06-15T02:08:03.000Z">
+<meta property="article:modified_time" content="2022-06-15T02:13:32.880Z">
 <meta property="article:author" content="CYLiu">
+<meta property="article:tag" content="Math">
+<meta property="article:tag" content="QFT">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://cyliu.cc/2022/03/11/Statistical-Mechanics-Lecture-Notes/">
+<link rel="canonical" href="https://cyliu.cc/2022/06/15/Trace-Theorems/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"fr","comments":true,"permalink":"https://cyliu.cc/2022/03/11/Statistical-Mechanics-Lecture-Notes/","path":"2022/03/11/Statistical-Mechanics-Lecture-Notes/","title":"Statistical Mechanics Lecture Notes"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"fr","comments":true,"permalink":"https://cyliu.cc/2022/06/15/Trace-Theorems/","path":"2022/06/15/Trace-Theorems/","title":"Trace Theorems"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Statistical Mechanics Lecture Notes | CYLiu</title>
+<title>Trace Theorems | CYLiu</title>
   
 
 
@@ -117,7 +119,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="fr">
-    <link itemprop="mainEntityOfPage" href="https://cyliu.cc/2022/03/11/Statistical-Mechanics-Lecture-Notes/">
+    <link itemprop="mainEntityOfPage" href="https://cyliu.cc/2022/06/15/Trace-Theorems/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -130,12 +132,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Statistical Mechanics Lecture Notes | CYLiu">
+      <meta itemprop="name" content="Trace Theorems | CYLiu">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Statistical Mechanics Lecture Notes
+          Trace Theorems
         </h1>
 
         <div class="post-meta-container">
@@ -146,7 +148,16 @@
       </span>
       <span class="post-meta-item-text">Posté le</span>
 
-      <time title="Article créé le: 2022-03-11 16:42:26" itemprop="dateCreated datePublished" datetime="2022-03-11T16:42:26+08:00">2022-03-11</time>
+      <time title="Article créé le: 2022-06-15 10:08:03" itemprop="dateCreated datePublished" datetime="2022-06-15T10:08:03+08:00">2022-06-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">dans</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Physics/" itemprop="url" rel="index"><span itemprop="name">Physics</span></a>
+        </span>
     </span>
 
   
@@ -159,115 +170,138 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h4 id="week-4-friday">Week 4, Friday</h4>
-<p><span class="math display">\[
-\mathrm{d}U=\mathrm{d}Q-p\mathrm{d}V
-\]</span> <span id="more"></span> <span class="math display">\[
-k_BT^2C_V=\langle E^2\rangle-\langle E\rangle^2
-\]</span></p>
-<p>L.H.S. Response function, represents compressibility<br />
-R.H.S. fluctuation of energy, represents number of particles</p>
-<p><span class="math display">\[
-\frac{\sqrt{\langle (\Delta E)^2\rangle}}{\langle E\rangle}= \sqrt{k_BT^2 C_V}\sim \frac{1}{\sqrt{N}}\quad N\to \infty
-\]</span></p>
-<p>In the limit of large <span class="math inline">\(N\)</span>, canonical ensemble <span class="math inline">\(\to\)</span> micro canonical ensemble</p>
-<p>temperature <span class="math inline">\(\sim\)</span> kinetic energy<br />
-If the particle number is small, for example, <span class="math inline">\(N=2\)</span>, the curve of kinetic varied greatly.</p>
-<p>If the particle number is large, the kinetic energy would be constant with minor fluctuation.</p>
-<p>Example: Ideal gas <span class="math inline">\(N,V,T\)</span> <span class="math display">\[
-H=\sum\limits_{i=1}^N\frac{p_i^2}{2m}
+        <p><span class="math display">\[
+\operatorname{Tr}(A+B) \equiv \operatorname{Tr}(A)+\operatorname{Tr}(B)
 \]</span></p>
 <p><span class="math display">\[
-\begin{aligned}
-Q_N(T,V)&amp;=\frac{1}{N!}\frac{1}{h^{3N}} \int e^{-\frac{1}{2m}\sum\limits_i p_i^2 }\prod\limits_{i=1}^N \mathrm{d}^3q_i\mathrm{d}^3p_i\\
-&amp;=\frac{1}{N!}\left[\frac{V}{h^3}(2\pi mk_B T)^{1/2}\right]^N\\
-&amp;=\frac{1}{N!}\left[Q_1(V,T)\right]^N
-\end{aligned}
+\operatorname{Tr}(A B \ldots Y Z) \equiv \operatorname{Tr}(Z A B \ldots
+Y)
 \]</span></p>
 <p><span class="math display">\[
-Q_1=\frac{V}{\lambda_T^2},\lambda_T=\frac{h}{\sqrt{2\pi mk_BT}}
+\gamma^{\mu} \gamma^{\nu}+\gamma^{\nu} \gamma^{\mu} \equiv 2 g^{\mu \nu}
+I
 \]</span></p>
-<p><span class="math inline">\(Q_1(V,T)\)</span> is the partition function for a single particle.</p>
+<span id="more"></span>
+<p>Take the trace of the above formula</p>
 <p><span class="math display">\[
-a\gg \frac{h}{\sqrt{2\pi m k_BT}}, \quad h\to 0 
-\]</span></p>
-<p>quantum effects could be neglected</p>
-<p><span class="math inline">\(Q_N=\frac{1}{N!}Q_1^N\)</span>, shows statistical independence of gas particles. And <span class="math inline">\(\frac{1}{N!}\)</span> shows extensivity.</p>
-<p>How does <span class="math inline">\(N\)</span> ensure extensivity <span class="math display">\[
-N!\approx \left(\frac{N}{e}\right)^N
-\]</span></p>
-<p>extensive quantities for short ranged interacting system. <span class="math display">\[
-E_{\text{tot}}=\sum\limits_i E_i,\quad \text{No marginal effects}
-\]</span></p>
-<p>If it's long ranged interaction, total energy should incorporate interaction energy as well</p>
-<p>The effects of the shape of the margin on the system.</p>
-<p>If the shape of the box is circle or square, the trace of a particle moving inside would be fixed, unable to traverse the box, therefore unable to reach equilibrium. If there exists a shape that could make the particle traverse the box.</p>
-<p><span class="math display">\[
-p=-\left(\frac{\partial A}{\partial V}\right)_{N,T}=\frac{Nk_B T}{V}
+\operatorname{Tr}\left(\gamma^{\mu}
+\gamma^{\nu}\right)+\operatorname{Tr}\left(\gamma^{\nu}
+\gamma^{\mu}\right)=2 g^{\mu \nu} \operatorname{Tr}(I)
 \]</span></p>
 <p><span class="math display">\[
-g(E)=\left\{\begin{aligned}
-\frac{V^N}{N!}\left(\frac{2\pi m}{h^2}\right)^{\frac{3N}{2}} \frac{E^{\frac{3}{2}N-1}}{\frac{3}{2}N-1} \quad &amp; E\ge 0\\
-0 \quad &amp; E&lt;0
-\end{aligned}\right.
+\operatorname{Tr}(\gamma^\mu \gamma^\nu)=
+\operatorname{Tr}(\gamma^\nu\gamma^\mu)
 \]</span></p>
 <p><span class="math display">\[
-\rho(E)\mathrm{d}E \sim e^{-\beta E} g(E)\mathrm{d}E
-\]</span></p>
-<p><span class="math display">\[
-\frac{\partial e^{-\beta E}g(E)}{\partial E}=0
+\operatorname{Tr}\left(\gamma^{\mu} \gamma^{\nu}\right)=4 g^{\mu \nu}
 \]</span></p>
 <p><span class="math display">\[
 \begin{aligned}
-E&amp;= \left(\frac{3}{2}N-1\right)k_BT\\
-&amp;=\frac{3}{2}k_BTN=U
+\operatorname{Tr}(\gamma \cdot a)(\gamma \cdot b)
+&amp;=\operatorname{Tr}(\gamma \cdot b)(\gamma \cdot a) \\
+&amp;=\frac{1}{2} \operatorname{Tr} a_{\mu} b_{\nu}\left\{\gamma^{\mu},
+\gamma^{\nu}\right\} \\
+&amp;=a \cdot b \operatorname{Tr} 1=4 a \cdot b
 \end{aligned}
 \]</span></p>
-<p>Hamiltonian of one particle <span class="math display">\[
-H=\frac{p_x^2}{2m}+\frac{p_y^2}{2m}+\frac{p_z^2}{2m}
-\]</span></p>
-<p><span class="math display">\[
-\langle H\rangle = \frac{1}{2}k_BT\times 3
-\]</span></p>
-<p>Example 2 ideal gas<br />
-<span class="math inline">\(N\)</span> "red" atoms,<br />
-<span class="math inline">\(N\)</span> "blue" atoms,<br />
-<span class="math inline">\(N\)</span> "green" atoms</p>
-<p>atoms of the same colour are indistinguishable, atoms of different color are distinguishable,<br />
-a) entropy under canonical ensemble<br />
-b) what is the atoms are of the same color</p>
-<p>Solution:<br />
-mircrostate <span class="math inline">\(\rho(q,p,\text{color})\)</span></p>
-<p><span class="math inline">\(N\)</span> atoms of the same color. <span class="math display">\[
-Q_N = \frac{1}{N!} \left(\frac{V}{\lambda_T}\right)^N\to A_N=Nf(T)-Nk_BT\ln \left(\frac{eV}{N}\right)
-\]</span></p>
-<p><span class="math display">\[
-f(T)= \left(\frac{mk_BT}{2\pi \hbar^2}\right)^{\frac{3}{2}}
-\]</span></p>
-<p><span class="math inline">\(Q=Q_N^3\)</span></p>
+<ul>
+<li>The trace of any odd number of <span
+class="math inline">\(\gamma\)</span> matrices are zero.</li>
+</ul>
 <p><span class="math display">\[
 \begin{aligned}
-A &amp;= 3Nf(T) - 3Nk_BT\ln \left(\frac{eV}{N}\right)\\
-S &amp;= 3Nk_B\ln \left(\frac{eV}{3N}\right)-3Nf&#39;(T)
+\operatorname{Tr}\left(\gamma^{\mu} \gamma^{\nu} \gamma^{\rho}\right)
+&amp;=\operatorname{Tr}\left(\gamma^{5} \gamma^{5} \gamma^{\mu}
+\gamma^{\nu} \gamma^{\rho}\right) \\
+&amp;=\operatorname{Tr}\left(\gamma^{5} \gamma^{\mu} \gamma^{\nu}
+\gamma^{\rho} \gamma^{5}\right) \\
+&amp;=-\operatorname{Tr}\left(\gamma^{5} \gamma^{5} \gamma^{\mu}
+\gamma^{\nu} \gamma^{\rho}\right)\\
+&amp;=-\operatorname{Tr}(\gamma^\mu\gamma^\nu \gamma^\rho)
 \end{aligned}
 \]</span></p>
-<ol start="2" type="a">
-<li><span class="math display">\[
-S_1 = 3Nk_B\ln \left(\frac{eV}{3N}\right)-3Nf&#39;(T)
-\]</span></li>
+<p><span class="math display">\[
+\operatorname{Tr}\left(\gamma^{\mu} \gamma^{\nu} \gamma^{\rho}\right)=0
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+\operatorname{Tr}  a\llap{/}_1 \ldots a\llap{/}_{n}
+&amp;=\operatorname{Tr} a\llap{/}_{1} \ldots a\llap{/}_{n} \gamma_{5}
+\gamma_{5} \\
+&amp;=\operatorname{Tr} \gamma_{5} a\llap/_{1} \ldots a\llap{/}_{n}
+\gamma_{5}
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+\operatorname{Tr} a\llap/_{1} \ldots a\llap/_{n}=(-1)^{n}
+\operatorname{Tr} a\llap/_{1} \ldots a\llap/_{n} \gamma_{5} \gamma_{5}
+\]</span></p>
+<p><span class="math display">\[
+\operatorname{Tr} a\llap/_{1} \ldots a\llap/_{n}=0, \quad n \text { odd
+} .
+\]</span></p>
+<ul>
+<li>Trace of even number of matrices</li>
+</ul>
+<p><span class="math display">\[
+\begin{aligned}
+\gamma^{\mu} \gamma^{\nu} \gamma^{\rho} \gamma^{\sigma} &amp;=2 g^{\mu
+\nu} \gamma^{\rho} \gamma^{\sigma}-\gamma^{\nu} \gamma^{\mu}
+\gamma^{\rho} \gamma^{\sigma} \\
+&amp;=2 g^{\mu \nu} \gamma^{\rho} \gamma^{\sigma}-2 g^{\mu \rho}
+\gamma^{\nu} \gamma^{\sigma}+\gamma^{\nu} \gamma^{\rho} \gamma^{\mu}
+\gamma^{\sigma} \\
+&amp;=2 g^{\mu \nu} \gamma^{\rho} \gamma^{\sigma}-2 g^{\mu \rho}
+\gamma^{\nu} \gamma^{\sigma}+2 g^{\mu \sigma} \gamma^{\nu}
+\gamma^{\rho}-\gamma^{\nu} \gamma^{\rho} \gamma^{\sigma} \gamma^{\mu}
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+\Rightarrow \quad \gamma^{\mu} \gamma^{\nu} \gamma^{\rho}
+\gamma^{\sigma}+\gamma^{\nu} \gamma^{\rho} \gamma^{\sigma}
+\gamma^{\mu}=2 g^{\mu \nu} \gamma^{\rho} \gamma^{\sigma}-2 g^{\mu \rho}
+\gamma^{\nu} \gamma^{\sigma}+2 g^{\mu \sigma} \gamma^{\nu} \gamma^{\rho}
+.
+\]</span></p>
+<p><span class="math display">\[
+\operatorname{Tr}\left(\gamma^{\mu} \gamma^{\nu} \gamma^{\rho}
+\gamma^{\sigma}\right)=4 g^{\mu \nu} g^{\rho \sigma}-4 g^{\mu \rho}
+g^{\nu \sigma}+4 g^{\mu \sigma} g^{\nu \rho}
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+\operatorname{Tr}(\gamma \cdot a)(\gamma \cdot b)(\gamma \cdot c)(\gamma
+\cdot d)=&amp;-\operatorname{Tr}(\gamma \cdot b)(\gamma \cdot a)(\gamma
+\cdot c)(\gamma \cdot d) \\
+&amp;+2 a \cdot b \operatorname{Tr}(\gamma \cdot c)(\gamma \cdot d)
+\end{aligned}
+\]</span></p>
+<ul>
+<li>Full trace theorems</li>
+</ul>
+<ol type="a">
+<li><span class="math inline">\(\operatorname{Tr}(I)=4\)</span></li>
+<li>the trace of any odd number of <span
+class="math inline">\(\gamma\)</span>-matrices is zero;</li>
+<li><span class="math inline">\(\operatorname{Tr}\left(\gamma^{\mu}
+\gamma^{\nu}\right)=4 g^{\mu \nu}\)</span>;</li>
+<li><span class="math inline">\(\operatorname{Tr}\left(\gamma^{\mu}
+\gamma^{\nu} \gamma^{\rho} \gamma^{\sigma}\right)=4 g^{\mu \nu} g^{\rho
+\sigma}-4 g^{\mu \rho} g^{\nu \sigma}+4 g^{\mu \sigma} g^{\nu
+\rho}\)</span>;</li>
+<li>the trace of <span class="math inline">\(\gamma^{5}\)</span>
+multiplied by an odd number of <span
+class="math inline">\(\gamma\)</span>-matrices is zero;</li>
+<li><span
+class="math inline">\(\operatorname{Tr}\left(\gamma^{5}\right)=0\)</span></li>
+<li><span class="math inline">\(\operatorname{Tr}\left(\gamma^{5}
+\gamma^{\mu} \gamma^{\nu}\right)=0\)</span>; and</li>
+<li><span class="math inline">\(\operatorname{Tr}\left(\gamma^{5}
+\gamma^{\mu} \gamma^{\nu} \gamma^{\rho} \gamma^{\sigma}\right)=4 i
+\varepsilon^{\mu \nu \rho \sigma}\)</span>, where <span
+class="math inline">\(\varepsilon^{\mu \nu \rho \sigma}\)</span> is
+antisymmetric under the interchange of any two indices.</li>
 </ol>
-<p><span class="math display">\[
-S-S_1=3N\ln 3 = \ln 3^{3N} = \ln \Omega_c
-\]</span></p>
-<p><span class="math inline">\(3\)</span> is from 3 kinds of colors</p>
-<p><span class="math display">\[
-S=S_1+S_c
-\]</span></p>
-<p><span class="math inline">\(S\)</span>: microstate <span class="math inline">\((q,p,\text{color})\)</span> <span class="math inline">\(S_1\)</span>: <span class="math inline">\((q,p)\)</span> <span class="math inline">\(S_c\)</span>: <span class="math inline">\((color)\)</span></p>
-<p>total entropy <span class="math inline">\(S=S(d.o.f 1)+S(d.o.f.2)\)</span></p>
-<p><span class="math display">\[
-C_V \sim T\frac{\partial S}{\partial T}
-\]</span></p>
 
     </div>
 
@@ -276,19 +310,20 @@ C_V \sim T\frac{\partial S}{\partial T}
     
 
     <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Math/" rel="tag"># Math</a>
+              <a href="/tags/QFT/" rel="tag"># QFT</a>
+          </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2022/02/17/Quantum-Field-Theory-Ryder/" rel="prev" title="Quantum Field Theory-Ryder">
-                  <i class="fa fa-chevron-left"></i> Quantum Field Theory-Ryder
+                <a href="/2022/04/10/French-Helper-Pointer-Calendar/" rel="prev" title="French Helper Pointer Calendar">
+                  <i class="fa fa-chevron-left"></i> French Helper Pointer Calendar
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2022/04/10/French-Helper-Pointer-Calendar/" rel="next" title="French Helper Pointer Calendar">
-                  French Helper Pointer Calendar <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
